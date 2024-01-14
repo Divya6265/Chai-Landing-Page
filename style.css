@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,300&display=swap');
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #050505;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: .2s linear;
+    outline: none; border:none;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+/* header */
+.header{
+    position: fixed;
+    top:0; left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    z-index: 2; 
+    background-color: #000000;
+    border-bottom: .1rem solid rgba(255,255,255,.3);
+}
+
+.header .logo img{
+ height: 6rem;
+}
+
+.header .navbar a{
+    font-size: 2.5rem;
+    margin-right: 2rem;
+    color: #FFF;
+}
+.header .navbar #close{
+    font-size: 3rem;
+    display: none;
+    color: #FFF;
+}
+.header .navbar a:hover{
+    color: #d3ad7f;
+}
+.header #menu{
+    font-size: 3rem;
+    color: #fff;
+    display: none;
+}
+
+/* ends */
+
+/* home start */
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    color: white;
+    min-height: 100vh;
+    padding-top: 9rem;
+    align-items: center;
+    justify-content: center;
+    background:url(images/image.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+
+.home .content{
+    padding-left: 4rem;
+    flex: 1 1 40rem;
+    text-transform: uppercase;
+    font-size: 6rem;
+}
+.home .content .description{
+    font-size:  2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+.home .content span{
+   color: #d3ad7f;
+}
+
+.home .content .btn{
+    color:#fff;  
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem;
+    font-size: 1.7rem;
+    background:#d3ad7f;
+    cursor: pointer;
+}
+
+.home .content .btn:hover{
+    letter-spacing: .2rem;
+}
+
+
+
+/* end */
+
+
+/* about */
+.about, .menu, .blog{
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+ .title  {
+    display: block;
+    text-align: center;
+    width: 300px;
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: white;
+    padding: 1rem;
+    margin: 3rem;
+    border: .2rem solid #d3ad7f;
+    border-left: none;
+    border-right: none;
+}
+
+.about .title span{
+    color: #d3ad7f;
+}
+.about .content{
+  margin: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background: rgba( 255, 255, 255,0.17) ;
+}
+.about .content .heading{
+  font-size: 2.7rem;
+  text-transform: uppercase;
+  color: rgba( 255, 255, 255,0.17);
+  font-weight: 700;
+  padding: 2rem 0;
+}
+.about .content .description{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align: left;
+  margin: 2rem;
+  color: #FFF;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  /* width: 60rem; */
+}
+.about .content a img{
+  width: 50rem;
+}
+/* about ends */
+
+/* menu starts */
+
+ .box{
+  margin: 6rem;
+  width: 80%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 20rem));
+  gap: 7rem; 
+}
+
+.menu .box .item{
+  text-align: center;
+  background-color: #d3ad7f;
+}
+.menu .box .item img{
+  width: 100%;
+  height: 20rem;
+  object-fit:cover;
+}
+.menu .box .item .heading{
+  letter-spacing: .5rem;
+  padding: 1.5rem;
+  font-size: 18px;
+  font-weight: bold;
+}
+.menu .box .item .buy:hover{
+  letter-spacing: .5rem;
+  color: #000000;
+}
+.menu .box .item .buy{
+  font-family: 'Noto Serif', serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 7px;
+  justify-content: center;
+  cursor: pointer;
+}
+/* menu ends */
+/* blog starts */
+.blog{
+ display: flex;
+ justify-content: center;
+}
+.blog .container{
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 35rem));
+  gap:3rem; 
+}
+.blog .container .post img{
+  width: 100%;
+  object-fit: cover;
+}
+.blog .container .post{
+  cursor: pointer;
+  background-color: rgba( 255, 255, 255,0.17);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.blog .container .post .heading{
+  text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+
+/* blog ends */
+/* contact starts */
+.contact{
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
+    }
+    .cont{
+      margin-top: 3rem;
+      width: 40%;
+    }
+    input, input:focus{
+        font-size: 1.7rem; 
+        font-weight: 100;
+        color: #fff;
+        width:49.3%;
+        border-radius: 5px;
+        height: 5rem;
+        padding: 1rem;
+        background-color: rgba( 255, 255, 255,0.17);
+    }
+    textarea{
+        font-size: 1.7rem; 
+        font-weight: 100;
+        color: #fff;
+        border-radius: 3px;
+        resize: none;
+        margin-top: 2rem;
+        padding: 1rem;
+        width: 100%;
+        height: 20rem;
+        padding: 2rem;
+        background-color: rgba( 255, 255, 255,0.17);
+    }
+    button{
+        border-radius: 3px;
+        margin-top: 2rem;
+        padding: 1rem;
+        width: 100%;
+        font-weight: 200;
+        font-size: 1.8rem;
+        height: 4rem;
+        background-color: rgba( 255, 255, 255,0.37);    
+    }
+    button:hover{
+        color: #4D3626;
+        background-color: rgba(106, 104, 104, 0.17);    
+        letter-spacing: .3rem;
+    }
+
+   .contact {
+    text-align: center;
+   }
+   
+
+   footer{
+    margin-top: 5rem;
+    text-align: center;
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 200;
+    margin-bottom: 3rem;
+   }
+   footer span{
+    color: #6F4E37;
+    font-weight: 600;
+   }
+
+/* contact ends */
+
+
+/* ---------------- */
+@media (max-width:991px){
+    html{
+      font-size: 55%;
+    }
+  
+    .header{
+      padding: 2rem;
+    }
+  
+    section{
+      padding: 2rem;
+    }
+  
+  }
+  
+  @media (max-width:768px){
+    .about .content{
+      flex-direction: column;
+    }
+    .cont{
+      width: 70%;
+    }
+   /*header  */
+    .header #menu{
+      display: inline-block;
+    }
+  
+    .header .navbar{
+      position: fixed;
+      top: 0; right: -105%;
+      width: 30rem;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(50px);
+      transition: .5s;
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      z-index: 1200;
+    }
+  
+    .header .navbar.active{
+      right: 0;
+    }
+    .header .navbar .nav_item{
+        font-size: 2rem;
+    }
+    .header .navbar #close{
+      top: 30px; right:20px;
+      position: absolute;
+      display: block;
+    }
+  
+    .header .navbar a{
+      display: block;
+      margin: 1rem 0;
+      text-align: center;
+      font-size: 3rem;
+    }
+  /* header ends */
+
+  /* home */
+    .home .content{
+      padding-top: 9.5rem;
+    }
+    .home .content .title{
+      font-size: 4rem;
+    }
+  
+    .home .content .description{
+      font-size: 1.6rem;
+    }
+    /* home ends */
+    
+    /* about */
+    .about .content{
+      text-align: center;
+      padding: 2rem;
+      margin: 2rem;
+    }
+    .about .content a img{
+      width: 90%;
+    }
+    /* about end */
+
+    /* blog starts */
+    .blog h2 {
+      margin-top: 2rem 1rem 1rem;
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size: 1.5rem;
+    }
+        /* blog ends */
+  }
+  
+  @media (max-width:450px){
+    html{
+      font-size: 50%;
+    }
+  }
+  /* /------------- */
